@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+html {
+	font-size: 62.5%;
+	font-family: $font-primary;
+	scroll-behavior: smooth;
+}
+
+body {
+	max-width: 150rem;
+	background: $white;
+	margin: 0 auto;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 0 $sm-global-padding;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+header,
+section,
+footer {
+	width: 100%;
+}
+
+section {
+	margin-bottom: 6rem;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.logo {
+	color: $white;
+}
+
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (min-width: $tablet-breakpoint) {
+	body {
+		padding: 0 $global-padding;
+	}
+
+	section {
+		margin-bottom: 8rem;
+	}
+}

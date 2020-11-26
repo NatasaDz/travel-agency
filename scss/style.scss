@@ -1,0 +1,19 @@
+// Importing scss files
+
+/* Utils */
+@import 'utils/variables';
+
+// /* Base */
+@import 'base/reset';
+@import 'base/global';
+@import 'base/typography';
+
+// /* Components */
+@import 'components/banner';
+@import 'components/about';
+@import 'components/offers';
+@import 'components/forms';
+
+// /* Layout */
+@import 'layout/footer';
+@import 'layout/header';

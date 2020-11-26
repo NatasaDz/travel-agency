@@ -1,0 +1,34 @@
+.main-title,
+.title,
+.subtitle {
+	font-family: $font-secondary;
+	margin-bottom: 2rem;
+	color: $primary-color;
+}
+
+.main-title {
+	font-size: 4.3rem;
+}
+
+.title {
+	font-size: 3.5rem;
+}
+
+.subtitle {
+	font-size: 3rem;
+}
+
+@media (min-width: $desktop-breakpoint) {
+	.main-title {
+		font-size: 7rem;
+	}
+
+	.title {
+		font-size: 5rem;
+		margin-bottom: 5rem;
+	}
+
+	.subtitle {
+		font-size: 4rem;
+	}
+}

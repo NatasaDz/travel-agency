@@ -1,0 +1,131 @@
+.offers {
+	&__box {
+		box-shadow: .5rem .5rem 1.7rem -.8rem rgba($secondary-color, .75), -.1rem -.1rem 1.7rem -.8rem rgba($secondary-color, .75);
+		margin-bottom: 5rem;
+		padding-bottom: 3.5rem;
+		cursor: pointer;
+
+		&:hover {
+			background-color: lighten($primary-color, 5%);
+
+			.offers__img {
+				&::before {
+					border-color: transparent lighten($primary-color, 5%) transparent transparent;
+				}
+			}
+
+			.subtitle,
+			.offers__list-item {
+				color: $white;
+			}
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 25rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 8rem 100vw 0 0;
+			bottom: 0;
+			border-color: transparent $white transparent transparent;
+			z-index: 1;
+		}
+
+		&--1 {
+			background-image: url('./../imgs/offers-1.jpg');
+		}
+
+		&--2 {
+			background-image: url('./../imgs/offers-2.jpg');
+		}
+
+		&--3 {
+			background-image: url('./../imgs/offers-3.jpg');
+		}
+	}
+
+	&__list {
+		padding: 0 4rem;
+	}
+
+	&__list-item {
+		padding-bottom: 1.5rem;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0rem;
+				width: 100%;
+				height: .1rem;
+				background-color: lighten($secondary-color, 45%);
+			}
+		}
+	}
+
+	&__btn {
+		background: none;
+		font-family: $font-primary;
+		font-size: 2rem;
+		letter-spacing: .5rem;
+		padding: 1.5rem 4rem;
+		border: 0;
+		border-radius: 3rem;
+		position: relative;
+		overflow: hidden;
+		color: $white;
+		transition: all .3s ease-in-out;
+		outline: none;
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, rgba($primary-color, 0.8) 0%, rgba($primary-color, 0.6) 30%, rgba($primary-color, 0.3) 100%);
+			z-index: -1;
+		}
+
+		&:hover {
+			background-color: $primary-color;
+
+			&::before,
+			&::after {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+@media (min-width: $tablet-breakpoint) {
+	.offers {
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box {
+			width: 31%;
+		}
+	}
+}
